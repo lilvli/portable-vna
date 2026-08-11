@@ -1,0 +1,19 @@
+* text=auto
+
+*.md text eol=lf
+*.v text eol=lf
+*.sv text eol=lf
+*.vhd text eol=lf
+*.vhdl text eol=lf
+*.xdc text eol=lf
+*.tcl text eol=lf
+*.mem text eol=lf
+*.txt text eol=lf
+*.xpr text eol=lf
+*.svg text eol=lf
+
+*.docx binary
+*.pdf binary
+*.png binary
+*.jpg binary
+*.jpeg binary

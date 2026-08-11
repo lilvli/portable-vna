@@ -1,0 +1,6 @@
+Portable VNA
+Copyright 2026 lvshuang <15565374073@163.com>
+
+This repository contains original portable-VNA FPGA/software, hardware-design,
+documentation, and RTC protocol material. See LICENSE.md for the licence that
+applies to each part of the repository.

@@ -1,0 +1,52 @@
+# Local workspace and temporary files
+.Xil/
+**/.Xil/
+tmp/
+output/
+build/
+**/build/
+-p/
+dfx_runtime.txt
+**/dfx_runtime.txt
+
+# Local vendor reference library. Publicly releasable material is copied to docs/.
+doc/
+
+# Vivado generated directories
+**/*.cache/
+**/*.gen/
+**/*.hw/
+**/*.ip_user_files/
+**/*.runs/
+**/*.sim/
+**/xsim.dir/
+
+# Vivado generated and debug artifacts
+*.jou
+*.log
+*.str
+*.wdb
+*.wcfg
+*.dcp
+*.bit
+*.bin
+*.rpx
+*.pb
+*.rtti
+*.dbg
+*.ltx
+*.xpr
+
+# Third-party installers and archives
+*.exe
+*.msi
+*.rar
+*.7z
+*.zip
+
+# OS and editor files
+Thumbs.db
+.DS_Store
+*.swp
+*.tmp
+*~
