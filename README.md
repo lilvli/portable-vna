@@ -19,6 +19,8 @@
 
 第一阶段必须能够脱离 RTC 独立扫频、采集、校准和保存数据。RTC 状态机、转台扫描、波控表和 HDF 业务逻辑不进入 VNA 核心。
 
+当前硬件不从零制板，而是使用已购买的 [XCKU5P 成品系统板](https://item.taobao.com/item.htm?id=1024670831801) 和 [FMCADDA-9250-9144 成品子卡](https://item.taobao.com/item.htm?id=823636332778) 完成第一轮验证。直采闭环通过后再进入自主原理图和 PCB 设计。
+
 ## 开发阶段边界
 
 1. **直采验证原型（当前）：** 不集成上下变频，优先验证 `R/A` 相干复数采集、`S11`、SOL 校准和整机数据闭环。
@@ -58,6 +60,7 @@ portable-vna/
 重要入口：
 
 - [整体结构规划](hardware/SYSTEM_ARCHITECTURE.md)
+- [成品板验证硬件基线](hardware/PROTOTYPE_HARDWARE_BASELINE.md)
 - [FPGA 工程说明](software/FPGA/README.md)
 - [FPGA 编码规范](software/FPGA/FPGA_CODING_STANDARD.md)
 - [软件实施路线](software/FPGA/SOFTWARE_IMPLEMENTATION_ROADMAP.md)
@@ -73,6 +76,7 @@ portable-vna/
 - 示例配置 ROM 仍是占位数据，默认禁止向真实器件误发送。
 - `software/FPGA/rtl/top.v` 仍是空顶层，尚未连接真实管脚。
 - 尚未完成真实 SPI、LMK 锁定、JESD204B、DAC/ADC 数据链路、射频前端或 SOL 校准的硬件验证。
+- XCKU5P 系统板和 FMCADDA-9250-9144 子卡已购买，但“已购买”不等于“已上电验证”。
 
 详细证据边界见 [FPGA 工程说明](software/FPGA/README.md) 和各模块验证记录。
 
@@ -96,7 +100,7 @@ RTC 协议和自动测试逻辑属于本项目后续扩展输入。推荐保持�
 
 ## 第三方资料
 
-仓库不提交厂商安装程序、RAR 压缩包、芯片数据手册、板卡原理图、Vivado 生成物或未经确认允许再分发的 Demo。对应型号和官方获取入口记录在 [第三方资料获取说明](docs/THIRD_PARTY_SOURCES.md)。
+仓库不提交厂商安装程序、RAR 压缩包、芯片数据手册、未获明确再分发许可的板卡原理图、Vivado 生成物或未经确认允许再分发的 Demo。对应型号、采购来源和获取入口记录在 [第三方资料获取说明](docs/THIRD_PARTY_SOURCES.md)。仓库中的板间接口图和 VNA 接线图为本项目自行绘制的抽象图。
 
 ## 开源许可
 
