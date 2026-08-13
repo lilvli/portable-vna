@@ -2,6 +2,18 @@
 
 All notable changes to the Portable VNA host application are documented here.
 
+## [0.1.1] - 2026-08-13
+
+### Fixed
+
+- Made the host-only release self-contained by adding the PVNA-Link V0.1 protocol Markdown under `software/host/docs/`.
+- Replaced the README link to an unpublished repository-root protocol file with a link inside the authorized host release scope.
+
+### Validation
+
+- Re-ran the complete offline release gate after the documentation and version updates.
+- Real serial, FPGA, JESD, ADC/DAC, RF, and physical SOL hardware access remained 0.
+
 ## [0.1.0] - 2026-08-13
 
 ### Added

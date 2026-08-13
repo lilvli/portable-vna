@@ -1,6 +1,6 @@
 # Portable VNA Host
 
-当前发布版本：`v0.1.0`（2026-08-13）。变更记录见 [CHANGELOG.md](CHANGELOG.md)，发布说明见 [RELEASE_NOTES_v0.1.0.md](RELEASE_NOTES_v0.1.0.md)。
+当前发布版本：`v0.1.1`（2026-08-13）。变更记录见 [CHANGELOG.md](CHANGELOG.md)，发布说明见 [RELEASE_NOTES_v0.1.1.md](RELEASE_NOTES_v0.1.1.md)。
 
 便携矢网第一阶段上位机。目标是在 Windows 上用 `XCKU5P + FMCADDA-9250-9144` 完成直采复数测量验证；第一阶段不控制上下变频、RTC、转台或波控。
 
@@ -17,7 +17,7 @@ ARCHITECTURE.md           分层、数据和安全边界
 TASKS.md                  里程碑和证据状态
 ```
 
-协议唯一规范源是 `../../docs/protocol/portable_vna_phase1_protocol_v0.1.md`。
+本发布包含的协议规范快照是 [`docs/portable_vna_phase1_protocol_v0.1.md`](docs/portable_vna_phase1_protocol_v0.1.md)。
 
 ## Windows 开发启动
 
