@@ -1,0 +1,10 @@
+node_modules/
+.npm-cache/
+test-artifacts/electron-e2e/*.png
+test-artifacts/electron-e2e/*.jsonl
+test-artifacts/electron-e2e/user-data/
+test-artifacts/electron-e2e/renderer-diagnostic.json
+dist/
+dist-electron/
+coverage/
+*.log

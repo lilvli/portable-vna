@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools==80.9.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "portable-vna-host"
+version = "0.1.0"
+description = "Phase-one host service for the Portable VNA"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.116,<1",
+  "pydantic>=2.11,<3",
+  "pyserial>=3.5,<4",
+  "uvicorn[standard]>=0.35,<1",
+]
+
+[project.optional-dependencies]
+dev = [
+  "httpx>=0.28,<1",
+  "pytest>=8.4,<9",
+  "pytest-asyncio>=1.1,<2",
+  "ruff>=0.12,<1",
+  "setuptools==80.9.0",
+]
+
+[project.scripts]
+pvna-host = "pvna_host.main:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+addopts = "--basetemp=.pytest-tmp"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "ASYNC"]
+
+[tool.uv]
+build-constraint-dependencies = ["setuptools==80.9.0"]

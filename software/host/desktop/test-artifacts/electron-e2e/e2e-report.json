@@ -1,0 +1,154 @@
+{
+  "schema_version": "pvna.desktop.e2e.v1",
+  "electron_version": "43.4.0",
+  "run_mode": "SIMULATED",
+  "real_serial_accesses": 0,
+  "real_device_accesses": 0,
+  "browser_preview_evidence": false,
+  "steps": [
+    {
+      "name": "default_disconnected_unknown",
+      "status": "PASS",
+      "detail": "真实 Electron 初始窗口；D:\\workspace\\project\\protable_vna\\software\\host\\desktop\\test-artifacts\\electron-e2e\\electron-1920x1080-initial-disconnected.png",
+      "timestamp_utc": "2026-08-12T09:56:26.809Z"
+    },
+    {
+      "name": "keyboard_tab_order",
+      "status": "PASS",
+      "detail": "真实 Tab/Shift+Tab 路径跳过禁用控件并恢复连接按钮：{\"connectFocus\":{\"tag\":\"BUTTON\",\"text\":\"显式连接\",\"disabled\":false,\"outline\":\"rgb(119, 233, 238) solid 1.6px\",\"outlineStyle\":\"solid\",\"boxShadow\":\"none\",\"visible\":true},\"previousFocus\":{\"tag\":\"SELECT\",\"text\":\"SIMULATED · 离线仿真HARDWARE · 串口软件层（实板未验收）\",\"disabled\":false,\"outline\":\"rgb(110, 231, 236) solid 1.6px\",\"outlineStyle\":\"solid\",\"boxShadow\":\"rgba(62, 167, 181, 0.118) 0px 0px 0px 2.93672px\",\"visible\":true},\"restoredConnectFocus\":{\"tag\":\"BUTTON\",\"text\":\"显式连接\",\"disabled\":false,\"outline\":\"rgb(118, 232, 237) solid 1.6px\",\"outlineStyle\":\"solid\",\"boxShadow\":\"none\",\"visible\":true}}",
+      "timestamp_utc": "2026-08-12T09:56:27.215Z"
+    },
+    {
+      "name": "explicit_simulated_connect",
+      "status": "PASS",
+      "detail": "真实 Enter 激活 SIMULATED 显式连接，初态 HOLD；真实资源访问 0",
+      "timestamp_utc": "2026-08-12T09:56:27.316Z"
+    },
+    {
+      "name": "hold_confirmed",
+      "status": "PASS",
+      "detail": "真实 Tab + Space 激活 HOLD，服务确认 RF 关闭：{\"disconnectFocus\":{\"tag\":\"BUTTON\",\"text\":\"断开\",\"disabled\":false,\"outline\":\"rgb(116, 228, 234) solid 1.6px\",\"outlineStyle\":\"solid\",\"boxShadow\":\"none\",\"visible\":true},\"holdFocus\":{\"tag\":\"BUTTON\",\"text\":\"HOLD\",\"disabled\":false,\"outline\":\"rgb(118, 229, 230) solid 1.6px\",\"outlineStyle\":\"solid\",\"boxShadow\":\"none\",\"visible\":true}}",
+      "timestamp_utc": "2026-08-12T09:56:27.620Z"
+    },
+    {
+      "name": "single_point",
+      "status": "PASS",
+      "detail": "真实 Space 选择单点、Tab + Enter 启动；完成 1/1 且 Raw R/A 与 A/R/R/A 可回看：{\"singleFocus\":{\"tag\":\"BUTTON\",\"text\":\"单点\",\"disabled\":false,\"outline\":\"rgb(110, 231, 236) solid 1.6px\",\"outlineStyle\":\"solid\",\"boxShadow\":\"none\",\"visible\":true},\"startSingleFocus\":{\"tag\":\"BUTTON\",\"text\":\"开始单点\",\"disabled\":false,\"outline\":\"rgb(116, 232, 237) solid 1.6px\",\"outlineStyle\":\"solid\",\"boxShadow\":\"none\",\"visible\":true}}",
+      "timestamp_utc": "2026-08-12T09:56:28.746Z"
+    },
+    {
+      "name": "sweep_progress",
+      "status": "PASS",
+      "detail": "服务已验证并保存点后进度才推进",
+      "timestamp_utc": "2026-08-12T09:56:29.359Z"
+    },
+    {
+      "name": "sweep_complete",
+      "status": "PASS",
+      "detail": "401 点 SIMULATED 扫频完成并进入 HOLD",
+      "timestamp_utc": "2026-08-12T09:56:32.563Z"
+    },
+    {
+      "name": "bounded_cancel",
+      "status": "PASS",
+      "detail": "真实 Tab + Space 激活有界取消并形成部分只读回放记录：{\"tag\":\"BUTTON\",\"text\":\"取消\",\"disabled\":false,\"outline\":\"rgb(120, 226, 231) solid 1.6px\",\"outlineStyle\":\"solid\",\"boxShadow\":\"none\",\"visible\":true}",
+      "timestamp_utc": "2026-08-12T09:56:33.423Z"
+    },
+    {
+      "name": "validation_error",
+      "status": "PASS",
+      "detail": "真实 Enter 触发降序频率错误；未创建运行，焦点恢复，真实 Escape 后保持可操作：{\"invalidStartFocus\":{\"tag\":\"BUTTON\",\"text\":\"开始扫频\",\"disabled\":false,\"outline\":\"rgb(118, 233, 237) solid 1.6px\",\"outlineStyle\":\"solid\",\"boxShadow\":\"none\",\"visible\":true},\"restoredAfterError\":{\"tag\":\"BUTTON\",\"text\":\"开始扫频\",\"disabled\":false,\"outline\":\"rgb(110, 231, 236) solid 1.6px\",\"outlineStyle\":\"solid\",\"boxShadow\":\"none\",\"visible\":true},\"afterEscape\":{\"tag\":\"BUTTON\",\"text\":\"开始扫频\",\"disabled\":false,\"outline\":\"rgb(110, 231, 236) solid 1.6px\",\"outlineStyle\":\"solid\",\"boxShadow\":\"none\",\"visible\":true}}",
+      "timestamp_utc": "2026-08-12T09:56:36.115Z"
+    },
+    {
+      "name": "sol_open",
+      "status": "PASS",
+      "detail": "OPEN 标准运行完成，11 点冻结轴",
+      "timestamp_utc": "2026-08-12T09:56:36.637Z"
+    },
+    {
+      "name": "sol_short",
+      "status": "PASS",
+      "detail": "SHORT 标准运行完成，11 点冻结轴",
+      "timestamp_utc": "2026-08-12T09:56:37.216Z"
+    },
+    {
+      "name": "sol_load",
+      "status": "PASS",
+      "detail": "LOAD 标准运行完成，11 点冻结轴",
+      "timestamp_utc": "2026-08-12T09:56:37.736Z"
+    },
+    {
+      "name": "sol_calibration",
+      "status": "PASS",
+      "detail": "从 measurement_role=OPEN/SHORT/LOAD 的同源原始运行创建派生 SOL 校准；以权威 calibration_id 选中状态确认",
+      "timestamp_utc": "2026-08-12T09:56:37.895Z"
+    },
+    {
+      "name": "calibrated_trace",
+      "status": "PASS",
+      "detail": "DUT Raw R/A 保留，同时回看校准 S11 dB/相位",
+      "timestamp_utc": "2026-08-12T09:56:38.601Z"
+    },
+    {
+      "name": "history_and_logs",
+      "status": "PASS",
+      "detail": "运行列表、当前运行、历史回看与事件日志可见",
+      "timestamp_utc": "2026-08-12T09:56:38.602Z"
+    },
+    {
+      "name": "healthy_banner",
+      "status": "PASS",
+      "detail": "用户取消记录保留在运行列表，但健康 COMPLETED 画面不显示陈旧 BLOCKED",
+      "timestamp_utc": "2026-08-12T09:56:38.602Z"
+    },
+    {
+      "name": "authoritative_run_status",
+      "status": "PASS",
+      "detail": "顶部 STATUS 由当前权威 run snapshot 派生：COMPLETED、11/11、HOLD CONFIRMED；曲线标题明确为幅度 dB",
+      "timestamp_utc": "2026-08-12T09:56:38.602Z"
+    },
+    {
+      "name": "s1p_isolated_atomic_save",
+      "status": "PASS",
+      "detail": "同目录临时写、fsync、独立 RI 语义解析、原子替换完成；11 点/50 ohm/SHA-256 0c48bdbf29eb75205bc7f1dc866ca150f1978603882b3bfdc8a332a69bc79a12；隔离文件验证后清理",
+      "timestamp_utc": "2026-08-12T09:56:38.633Z"
+    },
+    {
+      "name": "visual_1920x1080",
+      "status": "PASS",
+      "detail": "真实 Electron contentSize=1920x1080，无横向溢出且关键按钮有效；D:\\workspace\\project\\protable_vna\\software\\host\\desktop\\test-artifacts\\electron-e2e\\electron-1920x1080-simulated-sol.png",
+      "timestamp_utc": "2026-08-12T09:56:39.137Z"
+    },
+    {
+      "name": "keyboard_1920x1080",
+      "status": "PASS",
+      "detail": "真实 Tab/Shift+Tab/Escape，焦点可见且禁用控件不接收焦点：{\"saveFocus\":{\"tag\":\"BUTTON\",\"text\":\"保存 .s1p\",\"disabled\":false,\"outline\":\"rgb(115, 229, 235) solid 1.6px\",\"outlineStyle\":\"solid\",\"boxShadow\":\"none\",\"visible\":true},\"previous\":{\"tag\":\"SELECT\",\"text\":\"RAW · 未校准 A/RCALIBRATED · cal_298ab3e8…8079c3\",\"disabled\":false,\"outline\":\"rgb(110, 231, 236) solid 1.6px\",\"outlineStyle\":\"solid\",\"boxShadow\":\"rgba(62, 167, 181, 0.118) 0px 0px 0px 2.89001px\",\"visible\":true},\"restored\":{\"tag\":\"BUTTON\",\"text\":\"保存 .s1p\",\"disabled\":false,\"outline\":\"rgb(114, 229, 235) solid 1.6px\",\"outlineStyle\":\"solid\",\"boxShadow\":\"none\",\"visible\":true}}",
+      "timestamp_utc": "2026-08-12T09:56:40.863Z"
+    },
+    {
+      "name": "visual_1366x768",
+      "status": "PASS",
+      "detail": "真实 Electron contentSize=1366x768，无横向溢出且关键按钮有效；D:\\workspace\\project\\protable_vna\\software\\host\\desktop\\test-artifacts\\electron-e2e\\electron-1366x768-simulated-sol.png",
+      "timestamp_utc": "2026-08-12T09:56:41.253Z"
+    },
+    {
+      "name": "keyboard_1366x768",
+      "status": "PASS",
+      "detail": "真实 Tab/Shift+Tab/Escape，焦点可见且禁用控件不接收焦点：{\"saveFocus\":{\"tag\":\"BUTTON\",\"text\":\"保存 .s1p\",\"disabled\":false,\"outline\":\"rgb(115, 229, 235) solid 1.6px\",\"outlineStyle\":\"solid\",\"boxShadow\":\"none\",\"visible\":true},\"previous\":{\"tag\":\"SELECT\",\"text\":\"RAW · 未校准 A/RCALIBRATED · cal_298ab3e8…8079c3\",\"disabled\":false,\"outline\":\"rgb(110, 231, 236) solid 1.6px\",\"outlineStyle\":\"solid\",\"boxShadow\":\"rgba(62, 167, 181, 0.118) 0px 0px 0px 2.89812px\",\"visible\":true},\"restored\":{\"tag\":\"BUTTON\",\"text\":\"保存 .s1p\",\"disabled\":false,\"outline\":\"rgb(113, 230, 235) solid 1.6px\",\"outlineStyle\":\"solid\",\"boxShadow\":\"none\",\"visible\":true}}",
+      "timestamp_utc": "2026-08-12T09:56:44.503Z"
+    },
+    {
+      "name": "visual_1080x720",
+      "status": "PASS",
+      "detail": "真实 Electron contentSize=1080x720，无横向溢出且关键按钮有效；D:\\workspace\\project\\protable_vna\\software\\host\\desktop\\test-artifacts\\electron-e2e\\electron-1080x720-simulated-sol.png",
+      "timestamp_utc": "2026-08-12T09:56:44.873Z"
+    },
+    {
+      "name": "keyboard_1080x720",
+      "status": "PASS",
+      "detail": "真实 Tab/Shift+Tab/Escape，焦点可见且禁用控件不接收焦点：{\"saveFocus\":{\"tag\":\"BUTTON\",\"text\":\"保存 .s1p\",\"disabled\":false,\"outline\":\"rgb(114, 229, 235) solid 1.6px\",\"outlineStyle\":\"solid\",\"boxShadow\":\"none\",\"visible\":true},\"previous\":{\"tag\":\"SELECT\",\"text\":\"RAW · 未校准 A/RCALIBRATED · cal_298ab3e8…8079c3\",\"disabled\":false,\"outline\":\"rgb(110, 231, 236) solid 1.6px\",\"outlineStyle\":\"solid\",\"boxShadow\":\"rgba(62, 167, 181, 0.118) 0px 0px 0px 2.88778px\",\"visible\":true},\"restored\":{\"tag\":\"BUTTON\",\"text\":\"保存 .s1p\",\"disabled\":false,\"outline\":\"rgb(113, 230, 235) solid 1.6px\",\"outlineStyle\":\"solid\",\"boxShadow\":\"none\",\"visible\":true}}",
+      "timestamp_utc": "2026-08-12T09:56:48.120Z"
+    }
+  ]
+}

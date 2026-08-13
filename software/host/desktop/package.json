@@ -1,0 +1,37 @@
+{
+  "name": "portable-vna-desktop",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Portable VNA phase-one Electron operator console",
+  "main": "dist-electron/main/index.js",
+  "scripts": {
+    "dev": "concurrently -k -s command-electron -n renderer,electron-ts,electron -c cyan,magenta,green \"vite --host 127.0.0.1\" \"tsc -p tsconfig.electron.json --watch --preserveWatchOutput\" \"wait-on tcp:127.0.0.1:5173 dist-electron/main/index.js && cross-env VITE_DEV_SERVER_URL=http://127.0.0.1:5173 electron .\"",
+    "build": "npm run typecheck && npm run build:electron && vite build",
+    "build:electron": "tsc -p tsconfig.electron.json",
+    "lint": "oxlint src electron tests vite.config.mts",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "start": "electron .",
+    "e2e:simulated": "cross-env PVNA_API_PORT=18765 PVNA_E2E_ARTIFACTS=test-artifacts/electron-e2e PVNA_E2E_USER_DATA=test-artifacts/electron-e2e/user-data electron .",
+    "preview": "vite preview --host 127.0.0.1"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "6.0.5",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "vite": "8.2.1"
+  },
+  "devDependencies": {
+    "@types/node": "26.2.0",
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.4",
+    "concurrently": "10.0.4",
+    "cross-env": "10.1.0",
+    "electron": "43.4.0",
+    "oxlint": "1.78.0",
+    "typescript": "7.0.2",
+    "vitest": "4.1.10",
+    "wait-on": "9.1.0"
+  }
+}
